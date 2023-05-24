@@ -17,7 +17,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
-    <section>
+    <section className="my-container">
         <SectionTitle
         subHeading={'---From 11:00am to 10:00pm---'}
         heading={'ORDER ONLINE'}
@@ -33,24 +33,24 @@ const Category = () => {
         className="mySwiper mt-12 mb-[90px]"
       >
         <SwiperSlide>
-          <img src={img1} alt="" />
-          <h3 className="text-4xl uppercase text-center -mt-16 text-white">Salads</h3>
+          <img className="lg:w-[312px]" src={img1} alt="" />
+          <h3 className="text-3xl uppercase text-center -mt-16 text-white primary-font">Salads</h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img2} alt="" />
-          <h3 className="text-4xl uppercase text-center -mt-16 text-white">Pizzas</h3>
+          <img className="lg:w-[312px]" src={img2} alt="" />
+          <h3 className="text-3xl uppercase text-center -mt-16  text-white primary-font">Pizzas</h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} alt="" />
-          <h3 className="text-4xl uppercase text-center -mt-16 text-white">Soup</h3>
+          <img className="lg:w-[312px]" src={img3} alt="" />
+          <h3 className="text-3xl uppercase text-center -mt-16  text-white primary-font">Soup</h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} alt="" />
-          <h3 className="text-4xl uppercase text-center -mt-16 text-white">Dessert</h3>
+          <img className="lg:w-[312px]" src={img4} alt="" />
+          <h3 className="text-3xl uppercase text-center -mt-16  text-white primary-font">Dessert</h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img5} alt="" />
-          <h3 className="text-4xl uppercase text-center -mt-16 text-white">Salads</h3>
+          <img className="lg:w-[312px]" src={img5} alt="" />
+          <h3 className="text-3xl uppercase text-center -mt-16  text-white primary-font">Salads</h3>
         </SwiperSlide>
       </Swiper>
     </section>
