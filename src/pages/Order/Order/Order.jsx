@@ -33,7 +33,7 @@ const Order = () => {
         defaultIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
       >
-        <TabList className="text-center">
+        <TabList className="text-center mb-10">
           <Tab>SALAD</Tab>
           <Tab>PIZZA</Tab>
           <Tab>SOUPS</Tab>

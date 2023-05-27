@@ -1,22 +1,51 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   const navOptions = (
     <>
       <li>
-        <Link className="uppercase" to="/">Home</Link>
+        <Link className="uppercase" to="/">
+          Home
+        </Link>
       </li>
       <li>
-        <Link className="uppercase" to="/">CONTACT us</Link>
+        <Link className="uppercase" to="/">
+          CONTACT us
+        </Link>
       </li>
       <li>
-        <Link className="uppercase" to="/">DASHBOARD</Link>
+        <Link className="uppercase" to="/">
+          DASHBOARD
+        </Link>
       </li>
       <li>
-        <Link className="uppercase" to="/menu">Our Menu</Link>
+        <Link className="uppercase" to="/menu">
+          Our Menu
+        </Link>
       </li>
       <li>
-        <Link className="uppercase" to="/order">Our Shop</Link>
+        <Link className="uppercase" to="/order">
+          Our Shop
+        </Link>
+      </li>
+      <li>
+        <Link to="/">
+          <button className="btn btn-ghost gap-2">
+            <FaShoppingCart/>
+            <div className="badge badge-sm badge-secondary">+0</div>
+          </button>
+        </Link>
       </li>
     </>
   );
@@ -49,14 +78,27 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="normal-case text-xl lg:ml-10">
-            <h2 className="primary-font font-extrabold">BISTRO BOSS <br /><span className="text-base">Restaurant</span></h2>
+            <h2 className="primary-font font-extrabold">
+              BISTRO BOSS <br />
+              <span className="text-base">Restaurant</span>
+            </h2>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          {user ? (
+            <>
+              <Link onClick={handleLogOut} className="btn btn-sm">
+                Logout
+              </Link>
+            </>
+          ) : (
+            <Link to="/login" className="btn btn-sm">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </>
