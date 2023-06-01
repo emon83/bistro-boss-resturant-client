@@ -13,3 +13,10 @@
   .primary-font {
      font-family: 'Cinzel', serif;
   }
+
+  .drawer-side a.active{
+   color: white;
+  }
+  .drawer-side a.active{
+   background: transparent;
+  }
