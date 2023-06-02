@@ -30,7 +30,7 @@ const Dashboard = () => {
         <Outlet />
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="btn btn-primary drawer-button lg:hidden mt-4"
         >
           Open drawer
         </label>
@@ -43,7 +43,7 @@ const Dashboard = () => {
           isAdmin ? (
             <>
               <li>
-                <NavLink to="/dashboard/home">
+                <NavLink to="/dashboard/adminHome">
                   <FaHome /> Admin Home
                 </NavLink>
               </li>
@@ -68,7 +68,7 @@ const Dashboard = () => {
           ) : (
             <>
               <li>
-                <NavLink to="/dashboard/home">
+                <NavLink to="/dashboard/userHome">
                   <FaHome /> User Home
                 </NavLink>
               </li>
